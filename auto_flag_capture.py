@@ -2,12 +2,7 @@ import re
 import sys
 import subprocess
 from time import sleep 
-import pyautogui as pt
-import pyperclip 
 import csv
-pt.FAILSAFE= True
-#from PIL import Image
-#import os
 import requests 
 from bs4 import BeautifulSoup
 import pandas as pd
