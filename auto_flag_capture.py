@@ -8,12 +8,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
-import pandas as pd
-new_group_images = pd.read_csv("new_group_images.csv")
-groups = new_group_images[' Image'].to_list()
-
-
-original_groups = [' nharrand/intsec-group-1:latest',
+groups = [' nharrand/intsec-group-1:latest',
  ' nharrand/intsec-group-2:latest',
  ' nharrand/intsec-group-3:latest',
  ' noorabh/passoire_group4_hardened:v1',
@@ -54,10 +49,7 @@ original_groups = [' nharrand/intsec-group-1:latest',
  ' nharrand/intsec-group-66:latest',
  ' helss/passoire:patch_17',
  ' victorlejon/intsec_defense:latest']
-new_groups = []
-for group in groups:
-    if group.strip() not in original_groups:
-        new_groups.append(group)
+
 
 def get_flag_4(group_name, base_url):
     r = requests.get(base_url)
