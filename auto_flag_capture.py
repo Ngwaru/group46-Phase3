@@ -139,7 +139,7 @@ for group_name in groups:
     print(group_docker_command)
     result = subprocess.run(group_docker_command, shell=True)
     print("docker container started")
-    sleep(30)
+    sleep(60)
     
     subprocess.run("docker ps > active_group.txt", shell = True)
     print("docker ps command done")
